@@ -23,7 +23,7 @@ namespace BookCatalogNew.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Description()
         {
             return View();
         }
