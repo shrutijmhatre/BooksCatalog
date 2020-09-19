@@ -1,30 +1,97 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
 
-<div class="text-center">
-    <h1 class="display-4">BOOKS CATALOG</h1>
-    <p>Presenting to you a collection of my favorite books.</p>
-    <span> Happy Reading!</span>
-</div>
+    @{
+        ViewData["Title"] = "Home Page";
+    }
 
-<div>
-    <ul>
-        <li>
-            <a asp-controller="Home" asp-action="Description">HARRY POTTER SERIES </a>
+    <div class="text-center">
+        <h1 class="display-4">BOOKS CATALOG</h1>
+        <h5>Presenting to you a collection of my favorite books.</h5>
+        <h5> Happy Reading!</h5>
+    </div>
+    <hr/>
 
-        </li>
-        <li>
-            <a asp-controller="Home" asp-action="Description">A THOUSAND SPLENDID SUNS</a>
-        </li>
-        <li>
-            <a asp-controller="Home" asp-action="Description">ANGELS AND DEMONS</a>
-        </li>
-        <li>
-            <a asp-controller="Home" asp-action="Description">OLIVER TWIST</a>
-        </li>
-        <li>
-            <a asp-controller="Home" asp-action="Description">PRIDE AND PREJUDICE</a>
-        </li>
-    </ul>
-</div>
+    <div class="container">
+
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    
+                        <img src="/img/hnew.jpg" alt="Harry Potter Collection" style="width:104%">
+                  
+                    <div class="caption text-center">
+                        <p>@Html.ActionLink("Harry Potter Series", "HarryPotter", "Home")</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    
+                        <img src="/img/kh.jpg" alt="A thousand splendid suns" style="width:100%">
+                    
+                    <div class="caption text-center">
+                        <p>@Html.ActionLink("A Thousand Splendid Suns", "AThousandSplendidSuns", "Home")</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    
+                        <img src="/img/and.jpg" alt="Angels and demons" style="width:100%">
+                    
+                    <div class="caption text-center">
+                        <p>@Html.ActionLink("Angels and Demons", "AngelsAndDemons", "Home")</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    
+                        <img src="/img/ot.jpg" alt="Oliver Twist" style="width:98%">
+                  
+                    <div class="caption text-center">
+                        <p>@Html.ActionLink("Oliver Twist", "OliverTwist", "Home")</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    
+                        <img src="/img/the-alchemist-a-graphic-novel.jpg" alt="The Alchemist" style="width:107%">
+                  
+                    <div class="caption text-center">
+                        <p>@Html.ActionLink("The Alchemist", "TheAlchemist", "Home")</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="thumbnail">
+                    
+                        <img src="/img/little2cover.jpg" alt="Little Women" style="width:109%">
+                  
+                    <div class="caption text-center">
+                        <p>@Html.ActionLink("Little Women", "LittleWomen", "Home")</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

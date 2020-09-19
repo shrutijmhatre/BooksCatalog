@@ -25,9 +25,45 @@ namespace BookCatalogNew.Controllers
 
         public IActionResult Description()
         {
+        
             return View();
         }
 
+        public IActionResult HarryPotter()
+        {
+
+            return View();
+        }
+
+        public IActionResult AThousandSplendidSuns()
+        {
+
+            return View();
+        }
+
+        public IActionResult AngelsAndDemons()
+        {
+
+            return View();
+        }
+
+        public IActionResult OliverTwist()
+        {
+
+            return View();
+        }
+
+        public IActionResult TheAlchemist()
+        {
+
+            return View();
+        }
+
+        public IActionResult LittleWomen()
+        {
+
+            return View();
+        }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
