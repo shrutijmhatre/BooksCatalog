@@ -63,7 +63,7 @@ namespace BookCatalogNew.Areas.Identity.Pages.Account
                 ModelState.AddModelError(string.Empty, ErrorMessage);
             }
 
-            returnUrl = returnUrl ?? Url.Content("~/");
+        returnUrl = returnUrl ?? Url.Content("~/");
 
             // Clear the existing external cookie to ensure a clean login process
             await HttpContext.SignOutAsync(IdentityConstants.ExternalScheme);
@@ -73,6 +73,7 @@ namespace BookCatalogNew.Areas.Identity.Pages.Account
             ReturnUrl = returnUrl;
         }
 
+        
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
             returnUrl = returnUrl ?? Url.Content("~/");
@@ -88,7 +89,7 @@ namespace BookCatalogNew.Areas.Identity.Pages.Account
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");
-
+                    return LocalRedirect(returnUrl);
                 }
 
 
