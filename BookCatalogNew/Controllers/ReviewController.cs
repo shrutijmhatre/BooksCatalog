@@ -31,6 +31,8 @@ namespace BookCatalogNew.Controllers
             return View(posts);
         }
 
+        
+        
        
         [Route("{year:min(2020)}/{month:range(1,12)}/{key}")]
         public IActionResult Post(int year, int month, string key)

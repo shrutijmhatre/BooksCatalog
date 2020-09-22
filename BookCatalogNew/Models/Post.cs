@@ -28,6 +28,11 @@ namespace BookCatalogNew.Models
             set { _key = value; }
         }
 
+
+        [Display(Name = "Select Book")]
+        [Required]
+        public string BookName { get; set; }
+
         [Display(Name ="Review Title")]
         [Required]
         [DataType(DataType.Text)]

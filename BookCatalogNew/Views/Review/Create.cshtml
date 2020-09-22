@@ -13,7 +13,20 @@
 
 
         <div asp-validation-summary="ModelOnly"></div>
-
+        <p>
+            <label asp-for="BookName"></label>
+            <select asp-for="BookName" id="books" name="BookName" >
+                <option value="Harry Potter Series">Harry Potter Series</option>
+                <option value="A thousand splendid suns">A thousand splendid suns</option>
+                <option value="Angels and demons">Angels and demons</option>
+                <option value="Oliver Twist">Oliver Twist</option>
+                <option value="The Alchemist">The Alchemist</option>
+                <option value="Little Women">Little Women</option>
+                <option value="I, Robot">I, Robot</option>
+                <option value="Outlnder">Outlnder</option>
+                <option value="Gone Girl">Gone Girl</option>
+            </select>
+        </p>
         <p>
             <label asp-for="Title"></label>
             <input asp-for="Title" class="form-control" placeholder="Review Title" />
