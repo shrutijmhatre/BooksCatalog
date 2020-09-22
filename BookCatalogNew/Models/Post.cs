@@ -48,7 +48,7 @@ namespace BookCatalogNew.Models
         public string Body { get; set; }
 
         [Required]
-        [Range(1, 10, ErrorMessage ="Rate on the scale of 1 to 10")]
+        [Range(1, 5, ErrorMessage ="Rate out of 5 stars")]
         public int Rating { get; set; }
 
         public DateTime Posted { get; set; }

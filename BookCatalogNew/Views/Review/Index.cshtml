@@ -37,7 +37,15 @@
         <div>
             <h6 class="font-weight-bold text-uppercase"> Rating</h6>
 
-            @post.Rating
+            @for (int i = 0; i < post.Rating; i++)
+            {
+                <span class="fa fa-star"></span>
+            }
+
+            @for (int i = post.Rating; i < 5; i++)
+            {
+                <span class="fa fa-star-o"></span>
+            }
         </div>
         <p>
             @Html.ActionLink("View", "Post", "Review", new
