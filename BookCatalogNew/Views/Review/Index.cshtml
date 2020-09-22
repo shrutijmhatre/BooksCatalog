@@ -1,0 +1,56 @@
+﻿
+
+
+
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h3>
+    Below are some of the latest reviews posted on the website
+</h3>
+<hr/>
+<div>
+
+    @foreach (var post in Model)
+    {
+
+
+    <article>
+
+        <h4> @post.Title </h4> 
+        <div>
+            Posted <span>@post.Posted</span> by <span>@post.Author</span>
+        </div>
+        
+
+        <h6 class="font-weight-bold text-uppercase"> Review</h6>
+
+
+
+        <div>
+
+            @post.Body
+        </div>
+        <div>
+            <h6 class="font-weight-bold text-uppercase"> Rating</h6>
+
+            @post.Rating
+        </div>
+        <p>
+            @Html.ActionLink("View", "Post", "Review", new
+                {
+                    year = post.Posted.Year,
+                    month = post.Posted.Month,
+                    key = post.Key
+                 })
+        </p>
+
+        <br />
+
+    </article>
+        <hr/>
+    }
+</div>

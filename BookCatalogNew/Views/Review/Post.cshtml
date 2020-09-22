@@ -1,0 +1,21 @@
+﻿@model BookCatalogNew.Models.Post
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h1>Reviews</h1>
+
+<article>
+    <h4>@Model.Title</h4>
+    <div>
+        Posted <span>@Model.Posted</span> by <span>@Model.Author</span> 
+    </div>
+    <div>
+        @Model.Body
+    </div>
+    <div>
+        @Model.Rating
+    </div>
+</article>

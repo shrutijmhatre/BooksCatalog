@@ -1,0 +1,40 @@
+﻿
+
+@model BookCatalogNew.Models.Post
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Add reviews and ratings!</h1>
+
+<fieldset>
+    <form asp-action="Create" asp-controller="Review">
+
+
+        <div asp-validation-summary="ModelOnly"></div>
+
+        <p>
+            <label asp-for="Title"></label>
+            <input asp-for="Title" class="form-control" placeholder="Review Title" />
+            <span asp-validation-for="Title"></span>
+        </p>
+
+        <p>
+            <label asp-for="Body"></label>
+            <textarea asp-for="Body" class="form-control" placeholder="Enter reviews"></textarea>
+            <span asp-validation-for="Body"></span>
+        </p>
+
+        <p>
+            <label asp-for="Rating"></label>
+            <input asp-for="Rating" class="form-control" placeholder="Rate on a scale of 1 to 10" />
+            <span asp-validation-for="Rating"></span>
+        </p>
+
+        <p>
+            <button type="submit">Submit Review</button>
+        </p>
+    </form>
+
+</fieldset>

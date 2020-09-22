@@ -23,11 +23,6 @@ namespace BookCatalogNew.Controllers
             return View();
         }
 
-        public IActionResult Description()
-        {
-        
-            return View();
-        }
 
         public IActionResult HarryPotter()
         {
@@ -64,6 +59,23 @@ namespace BookCatalogNew.Controllers
 
             return View();
         }
+
+        public IActionResult IRobot()
+        {
+            return View();
+        }
+
+        public IActionResult Outlander()
+        {
+            return View();
+        }
+
+        public IActionResult GoneGirl()
+        {
+
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
