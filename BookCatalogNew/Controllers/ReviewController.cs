@@ -26,7 +26,7 @@ namespace BookCatalogNew.Controllers
         [Route("")]
         public IActionResult Index()
         {
-            var posts = _db.Posts.OrderByDescending(x => x.Posted).Take(5).ToArray();
+            var posts = _db.Posts.OrderByDescending(x => x.Posted).ToArray();
             
             return View(posts);
         }
